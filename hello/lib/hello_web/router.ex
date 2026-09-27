@@ -14,7 +14,7 @@ defmodule HelloWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", HelloWeb do
+  scope "/api", HelloWeb do
     pipe_through :browser
 
     get "/", PageController, :home

@@ -4,7 +4,7 @@ import axios from 'axios'
 export function Home() {
     const [message, setMessage] = useState('');
     useEffect(() => {
-        axios.get('http://127.0.0.1:4000/hello').then(response => {
+        axios.get('http://127.0.0.1:4000/api/hello').then(response => {
             console.log(response.data)
             setMessage(response.data.message)
         }).catch(error => {
